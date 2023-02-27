@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Oito</title>
+    <style>
+        body{
+            background-color: rgb(14, 116, 116);
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        h1,h2, h3{ 
+            text-align: center;
+            color: white;
+        }
+        p{
+            color: rgb(169, 224, 15);
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula Oito</h1>
+    <h2>Condições em JavaScript</h2>
+    <p>IF e ELSE</p>
+    <p>IF (se) TRUE</p>
+    <p> ELSE (senão) FALSE</p>
+    <p>if (condição) { } (se a codição for verdadeira será feito o bloco do if (se) )</p>
+    <p>else { } ( se  a condição for falsa sera   feito o bloco do else( se nao) )</p>
+    <p>EX: suponhamos que a média para um aluno passar de ano em detetrmina faculdade seja 7. Vamos represenar usando a condição IF e ELSE</p>
+    <P> var media = 7 <br><br>
+        if( media >= 7){<br><br>
+             mostre("APROVADO") <br><br>
+        }else{ mostre ( "REPROVADO")}
+
+    </P>
+    <p>Neste caso o aluno estaria APROVADO</p>
+    <div>
+        <h2>sistema de multas</h2>
+       Velocidade do carro <input type="number" id="txtvel">Km/h
+        <input onclick="calcular()" type="button" value="verificar">
+    </div>
+        <div > 
+            <p id="res"> RESULTADO</p>
+        </div>
+        <div>
+            <h2>Nacionalidade</h2>
+            <p> informe seu País <input type="text" id="pais">
+            <input onclick="verificar()"  type="button" value=" verificar">
+        </p>
+        </div>
+        <div>
+            <p id="resultado"> Resultado</p>
+        </div>
+    <script>
+        function verificar(){
+           var txt1 = document.getElementById('pais')
+           var txt2 = (txt1.value.toLocaleUpperCase())
+           var p = 'BRASIL' 
+           var res = document.getElementById('res')
+           resultado.innerHTML = `Você nasceu em  ${txt2}`
+           
+           if( txt2 == p){
+                resultado.innerHTML += ` <p>Você é brasileiro</p> `
+           }else{
+                 resultado.innerHTML +=  ` <p>Você é estrangeiro</p>`
+           }
+
+        };
+
+
+
+
+        /*function calcular(){
+            var txtv = document.getElementById('txtvel')
+            var vel = Number(txtv.value)
+            var res = document.getElementById('res')
+            res.innerHTML = ` sua velocidade atual é de ${vel} km/h`
+            if(vel > 70){
+                res.innerHTML += ` <p>Você está acima da velocidade permitida. <strong>Multado</strong> por excesso de velocidade</p>`
+            }else {
+                res.innerHTML +=  ` <p>Você está dentro da velocidade permitida</p>.`
+            }
+            res.innerHTML += `<p>dirija sempre com cuidado</p>`
+        };
+        */
+    </script>
+</body>
+</html>

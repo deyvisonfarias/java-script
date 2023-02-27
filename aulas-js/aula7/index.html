@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Sete</title>
+    <style>
+        body{
+            background-color: rgb(14, 116, 116);
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        h1,h2, h3{ 
+            text-align: center;
+            color: white;
+        }
+        p{
+            color: rgb(169, 224, 15);
+            text-align: center;
+        } 
+        div#area{
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: auto;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula Sete</h1>
+    <h2> Eventos DOM</h2>
+    <p>Eventos são qualquer coisa que pode acontecer com determinado elemento</p>
+   <ul>
+    <li> EVENTOS DE MOUSE
+        <ol>
+            <li>MOUSEENTER
+                <ul><li>Ao entrar com o cursor em determinada area</li></ul>
+            </li>
+            <li>MOUSEMOVE
+                <ul><li>Ao mover o cursor em determinada area</li></ul>
+            </li>
+            <li>MOUSEDOWN
+                <ul><li>Ao clicar e segurar em determinada area</li></ul>
+            </li>
+            <li>MOUSEUP <ul><li>Ao soltar o click em determinada area</li></ul></li>
+            <li>MOUSEOUT <ul><li>Ao sair com o cursor de determinada area</li></ul></li>
+            <li>CLICK <ul><li>Ao clicar e soltar rapidamente em determinada area</li></ul></li>
+        </ol>
+    </li>
+    
+   </ul>
+    <div id="area"> Interaja...</div>
+    
+    <script>
+         var a = document.getElementById('area')
+         a.addEventListener('click', clicar)
+         a.addEventListener('mouseenter', entrar)
+         a.addEventListener('mouseout', sair)
+
+        function clicar(){
+            a.innerText = 'clicou!'
+            a.style.background = 'white'
+            a.style.color = 'black'
+        };
+        function entrar(){
+            a.innerText= 'entrou!'
+        };
+        function sair(){
+            a.innerText= 'saiu!'
+            a.style.background = 'black'
+            a.style.color = 'white'
+        };
+    </script>
+</body>
+</html>

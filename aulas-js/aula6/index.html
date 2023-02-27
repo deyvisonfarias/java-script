@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Seis</title>
+    <style>
+        body{
+            background-color: rgb(14, 116, 116);
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        h1,h2, h3{ 
+            text-align: center;
+            color: white;
+        }
+        p{
+            color: rgb(169, 224, 15);
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula Seis </h1>
+    <h2>Entendo o DOM </h2>
+    <h3>Selecionando</h3>
+    <p>por Marca(<strong> getElementsByTagName</strong>)</p>
+    <p> por ID <strong>(getElementById</strong>)</p>
+    <p>por NOME(<strong>getElementsByName </strong>)</p>
+    <p>por CLASSE (<strong>getElementsByClassName </strong>)</p>
+    <p>por SELETOR  (<strong>querySelector </strong>)</p>
+    <hr>
+    <p id="msg"> apenas teste</p>
+
+    <script>
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('h3')[0]
+        var teste = document.getElementById('msg')
+        var msg = document.querySelector('p#msg');
+        msg.style.background= "black"
+        msg.style.color = 'white'
+        msg.innerText=  'mudado o texto'
+         //teste.style.background = 'black'
+         //teste.innerText  = 'mudando o texto'
+         //document.getElementById('msg').innerText =  'mudando outra vez'
+         //var teste1 = document.getElementsByName('msg')[0]
+         //teste1.innerText = 'oi'
+         //p1.style.color = 'black'
+         //corpo.style.background = 'orange'
+         //document.write(`Está escrito assim: ${p1.innerText}`);
+         //document.write(`Está escrito assim: ${p1.innerHTML}`);
+    </script>
+</body>
+</html>
